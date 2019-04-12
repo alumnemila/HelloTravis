@@ -2,4 +2,12 @@ language: java
 install: ant test
 jdk:
   - oraclejdk8
-  
+deploy:
+  provider: releases
+  user: "alumnemila"
+  password:"mila123!!"
+  file: "dist/Application.jar"
+  skip_cleanup: true
+  on:
+    tags: true
+	
